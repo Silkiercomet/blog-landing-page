@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+:root{
+  --LightredH:hsl(356,100%,66%);
+--VerylightredH:hsl(355,100%,74%);
+--Verydarkblue:hsl(208, 49%, 24%);
+
+  --Grayishblue:hsl(240,2%,79%);
+  --Verydarkgrayishblue:hsl(207,13%,34%);
+  --Verydarkblackblue:hsl(240,10%,16%);
+
+  --Verylightred: hsl(13, 100%, 72%);
+  --Lightred: hsl(353, 100%, 62%);
+  --Verydarkgrayblue:hsl(237,17%,21%);
+  --Verydarkdesaturatedblue: hsl(237, 23%, 32%);
+}
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -50,3 +64,157 @@
 
     font-family: 'Overpass', sans-serif;
   }
+  /* utilities */
+  .header{
+    font-size: 1.8rem;
+    color: var(--Verydarkblackblue);
+    font-weight: 300;
+  }
+  .btn,.btn__white{
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid white;
+    font-weight: 500;
+
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+  }
+  .btn__white{
+    color: var(--LightredH);
+  }
+  .btn__white:hover{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .btn{
+    color: white;
+    background-color:transparent;
+  }
+  .btn:hover{
+    background-color: white;
+    color: var(--LightredH);
+  }
+  /* utilities */
+
+  /* hero */
+  .hero{
+    display: grid;
+    place-items: center;
+    position: relative;
+    min-height: 100vh;
+    padding: 40px 20px;
+    border-bottom-left-radius: 28%;
+    background-image:linear-gradient(to bottom,var(--Verylightred),var(--Lightred));
+    /*de izquierda a derecha se fenile las capaz que conforman al fondo, el orden importa porque pueden opacarse entre si, si fuera al revez no se podria ver la imagen porque el grandient lo opacaria*/
+    background-image:url(images/bg-pattern-intro-mobile.svg),linear-gradient(to bottom,var(--Verylightred),var(--Lightred));
+    background-repeat: no-repeat;
+    background-position: 33% 30%;
+
+  }
+  .hero__navbar{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    min-width: calc(100% - 80px);
+  }
+  .hero__navbar nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero_content h1{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #ebebeb;
+  }
+  .hero_content p{
+    text-align: center;
+    color: #ebebeb;
+    max-width: 30ch;
+  }
+  .hero_content h1 span{
+    display: block;
+  }
+  .hero__content_btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  /* hero */
+
+  /* introduction */
+
+  .introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-block: 100px;
+  }
+  .introduction h2{
+    color: var(--Verydarkblue);
+  }
+  .introduction__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+  .introduction__content_text{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-inline: 35px;
+  }
+  .introduction__content_text-item p{
+    color: var(--Verydarkgrayishblue);
+    margin-top: 15px;
+  }
+  /* introduction */
+
+  /* about */
+
+  .about{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    position: relative;
+
+    background-image:url(images/bg-pattern-circles.svg) ,linear-gradient(to bottom, var(--Verydarkblackblue), var(--Verydarkdesaturatedblue));
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: 70% -120%;
+
+    border-bottom-left-radius:28%;
+    border-top-right-radius: 28%;
+    margin-top: 350px;
+  }
+  .about figure{
+    position: absolute;
+    top: -270px;
+  }
+  .about__text{
+    padding-inline: 35px;
+    text-align: center;
+  }
+  .about__text h3{
+    font-size: 1.8rem;
+    color: white;
+  }
+  .about__text p{
+    padding-top: 20px;
+    color: var(--Grayishblue);
+  }
+  /* about */
