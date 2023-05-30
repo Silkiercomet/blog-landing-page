@@ -95,16 +95,22 @@
     background-color: white;
     color: var(--LightredH);
   }
+  .desktop{
+    display: none;
+  }
   /* utilities */
 
   /* hero */
+  .hero__navbar_nav-desktop, .hero__navbar_nav_menu{
+    display: none;
+  }
   .hero{
     display: grid;
     place-items: center;
     position: relative;
     min-height: 100vh;
     padding: 40px 20px;
-    border-bottom-left-radius: 28%;
+    border-bottom-left-radius:20%  20%;
     background-image:linear-gradient(to bottom,var(--Verylightred),var(--Lightred));
     /*de izquierda a derecha se fenile las capaz que conforman al fondo, el orden importa porque pueden opacarse entre si, si fuera al revez no se podria ver la imagen porque el grandient lo opacaria*/
     background-image:url(images/bg-pattern-intro-mobile.svg),linear-gradient(to bottom,var(--Verylightred),var(--Lightred));
@@ -274,3 +280,198 @@
     margin-block: 25px;
   }
   /* footer */
+
+  /* viweport of tablets 800 -> 1000px */
+
+  @media screen and (min-width:800px) {
+    /* hero */
+
+    .hero__navbar_nav-mobile{
+      display: none;
+    }
+    .hero__navbar_nav-desktop, .hero__navbar_nav_menu, .hero__navbar_nav div:first-child{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero__navbar_nav_menu {
+      list-style: none;
+      padding-left: 40px;  
+      display: flex;
+      gap: 15px;
+
+    }
+    .hero__navbar_nav_menu > *{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      color: white;
+    }
+    .hero__navbar_nav-desktop{
+      display: flex;
+      gap: 15px;
+    }
+    .hero__navbar_nav-desktop .btn{
+      border-color: transparent;
+    }
+    .hero__navbar_nav-desktop .btn:hover{
+      border-color: white;
+      background-color: transparent;
+      color: white;
+    }
+    /* hero */
+    /* text */
+    .introduction__content_text-item p, .about__text p, .details__content_item p{
+      max-width: 600px;
+    }
+    /* text */
+    /* about */
+    .about{
+      background-position: 70% -300px, center;
+    }
+    .about figure{
+      position: absolute;
+      top: -320px;
+    }
+    /* about */
+  }
+
+  /* viweport of tablets 800 -> 1000px */
+
+  /* viweport of desktop and laptops 1000 -> 2000px */
+  @media screen and (min-width:1020px) {
+    .desktop{
+      display: block;
+    }
+    .mobile{
+      display: none;
+    }
+    .introduction__content_text-item p, .header, .about__text p, .details__content_item p{
+      text-align: left;
+      max-width: 700px;
+    }
+    h2,h3,h4{
+      font-size: 2rem;
+
+    }
+    /* hero */
+    .hero{
+      /*de izquierda a derecha se fenile las capaz que conforman al fondo, el orden importa porque pueden opacarse entre si, si fuera al revez no se podria ver la imagen porque el grandient lo opacaria*/
+      background-image:url(images/bg-pattern-intro-desktop.svg),linear-gradient(to bottom,var(--Verylightred),var(--Lightred));
+      background-position: 30% center ;
+    
+    }
+    .hero_content h1{
+      font-size: 4rem;
+    }
+    .hero_content p{
+      max-width: 100%;
+    }
+    .hero_content h1 span{
+      display: inline-block;
+    }
+    /* hero */
+
+    /* introduction */
+    .introduction__content{
+      overflow: hidden;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .introduction__content figure{
+      position: relative;
+      left: 15%;
+    }
+    .introduction__content_text{
+      padding-left: 70px;
+    }
+    /* introduction */
+    /* about */
+    .about{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 430px;
+      max-height: 430px;
+      padding-inline: 35px;
+  
+      background-size: 90%, 100%;
+      background-position: -200% 80%, center;
+  
+      border-bottom-left-radius:28%;
+      border-top-right-radius: 28%;
+      margin-top: 50px;
+    }
+    .about figure{
+      position: relative;
+      top: 0;
+    }
+    .about .about__text h3{
+      text-align: left;
+    }
+    .about .about__text p{
+      max-width: 50ch;
+    }
+    /* about */
+
+    /* details */
+    .details{
+      flex-direction: row;
+      overflow: hidden;
+    }
+    .details figure{
+      position: relative;
+      left: -220px;
+    }
+    /* details */
+
+    /* footer */
+    .footer__menu{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex: .65;
+    }
+    footer, .footer__menu{
+      flex-direction: row;
+  
+    }
+    footer{
+      padding-inline: 100px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 150px;
+      border-top-right-radius: 15% 45%;
+    }
+    .footer__menu, .footer__menu_item ul{
+
+      text-align: left;
+
+    }
+
+    /* footer */
+  }
+  /* viweport of desktop and laptops 1800 -> 2000px++ */
+  @media screen and (min-width:1800px) {
+    body > *:not(.hero,footer){
+      max-width: 1800px;
+      margin-inline: auto;
+    }
+    .hero__navbar_nav{
+      max-width: 1800px;
+      margin-inline: auto;
+    }
+    .introduction__content, .details{
+      overflow: visible;
+    }
+    footer figure{
+      margin-left: auto;
+
+    }
+    .footer__menu{
+      margin-right: auto;
+      flex: .5;
+    }
+  }
+  /* viweport of desktop and laptops 1800 -> 2000px++ */
