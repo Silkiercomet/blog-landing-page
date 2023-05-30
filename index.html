@@ -13,12 +13,25 @@
   <section class="hero">
     <header class="hero__navbar">
       <nav class="hero__navbar_nav">
-        <figure>
-          <img src="images/logo.svg" alt="Blogr logo">
-        </figure>
-        <figure class="hero__navbar_nav-mobile">
-          <img src="images/icon-hamburger.svg" alt="hamburger mobile menu">
-        </figure>
+        <div>
+          <figure>
+            <img src="images/logo.svg" alt="Blogr logo">
+          </figure>
+          <ul class="hero__navbar_nav_menu">
+            <li class="hero__navbar_nav_menu-item">Product <i><img src="images/icon-arrow-light.svg" alt="arrow icon"></i></li>
+            <li class="hero__navbar_nav_menu-item">Company <i><img src="images/icon-arrow-light.svg" alt="arrow icon"></i></li>
+            <li class="hero__navbar_nav_menu-item">Connect <i><img src="images/icon-arrow-light.svg" alt="arrow icon"></i></li>
+          </ul>
+        </div>
+        <div>
+          <figure class="hero__navbar_nav-mobile">
+            <img src="images/icon-hamburger.svg" alt="hamburger mobile menu">
+          </figure>
+          <div class="hero__navbar_nav-desktop">
+            <button class="btn">Login</button>
+            <button class="btn__white">Sing Up</button>
+          </div>
+        </div>
       </nav>
     </header>
     <div class="hero_content">
@@ -35,7 +48,8 @@
     <h2>Designed for the future</h2>
     <div class="introduction__content">
       <figure>
-        <img src="images/illustration-editor-mobile.svg" alt="illustration editor">
+        <img class="mobile" src="images/illustration-editor-mobile.svg" alt="illustration editor">
+        <img class="desktop" src="images/illustration-editor-desktop.svg" alt="illustration editor">
       </figure>
       <div class="introduction__content_text">
         <div class="introduction__content_text-item">
@@ -67,7 +81,8 @@
 
   <section class="details">
     <figure>
-      <img src="images/illustration-laptop-mobile.svg" alt="illustration of a laptop">
+      <img class="mobile" src="images/illustration-laptop-mobile.svg" alt="illustration of a laptop">
+      <img class="desktop" src="images/illustration-laptop-desktop.svg" alt="illustration of a laptop">
     </figure>
     <div class="details__content">
       <div class="details__content_item">
