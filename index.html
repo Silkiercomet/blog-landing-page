@@ -18,13 +18,38 @@
             <img src="images/logo.svg" alt="Blogr logo">
           </figure>
           <ul class="hero__navbar_nav_menu">
-            <li class="hero__navbar_nav_menu-item">Product <i><img src="images/icon-arrow-light.svg" alt="arrow icon"></i></li>
-            <li class="hero__navbar_nav_menu-item">Company <i><img src="images/icon-arrow-light.svg" alt="arrow icon"></i></li>
-            <li class="hero__navbar_nav_menu-item">Connect <i><img src="images/icon-arrow-light.svg" alt="arrow icon"></i></li>
+            <li class="hero__navbar_nav_menu-item">Product <i><img src="images/icon-arrow-light.svg" alt="arrow icon"></i>
+            <div class="hero__navbar_nav_menu-item__menu">
+              <ul>
+                <li>Overview</li>
+                <li>Pricing</li>
+                <li>Marketplace</li>
+                <li>Features</li>
+                <li>Integrations</li>
+              </ul>
+            </div>
+            </li>
+            <li class="hero__navbar_nav_menu-item">Company <i><img src="images/icon-arrow-light.svg" alt="arrow icon"></i>
+            <div class="hero__navbar_nav_menu-item__menu">
+              <ul>
+                <li>About</li>
+                <li>Team</li>
+                <li>Blog</li>
+                <li>Careers</li>
+              </ul>
+            </div></li>
+            <li class="hero__navbar_nav_menu-item">Connect <i><img src="images/icon-arrow-light.svg" alt="arrow icon"></i>
+            <div class="hero__navbar_nav_menu-item__menu">
+              <ul>
+                <li>Contact</li>
+                <li>Newsletter</li>
+                <li>LinkedIn</li>
+              </ul>
+            </div></li>
           </ul>
         </div>
         <div>
-          <figure class="hero__navbar_nav-mobile">
+          <figure class="hero__navbar_nav-mobile" id="openModalBtn">
             <img src="images/icon-hamburger.svg" alt="hamburger mobile menu">
           </figure>
           <div class="hero__navbar_nav-desktop">
@@ -33,6 +58,44 @@
           </div>
         </div>
       </nav>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <ul>
+            <li class="modal-content__menu_item">
+              <header class="modal-content__menu_item-header">Product <i><img src="images/icon-arrow-dark.svg" alt="arrow icon"></i></header>
+              <ul class="accordion-content">
+                <li>Overview</li>
+                <li>Pricing</li>
+                <li>Marketplace</li>
+                <li>Features</li>
+                <li>Integrations</li>
+              </ul>
+            </li>
+            <li class="modal-content__menu_item">
+              <header class="modal-content__menu_item-header">Company <i><img src="images/icon-arrow-dark.svg" alt="arrow icon"></i></header>
+              <ul class="accordion-content">
+                <li>About</li>
+                <li>Team</li>
+                <li>Blog</li>
+                <li>Careers</li>
+              </ul>
+            </li>
+            <li class="modal-content__menu_item">
+              <header class="modal-content__menu_item-header">Connect <i><img src="images/icon-arrow-dark.svg" alt="arrow icon"></i></header>
+              <ul class="accordion-content">
+                <li>Contact</li>
+                <li>Newsletter</li>
+                <li>LinkedIn</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="modal-content-btns">
+            <button class="btn">Login</button>
+            <button class="btn__white">Sing Up</button>
+          </div>
+        </div>
+      </div>
     </header>
     <div class="hero_content">
       <h1><span>A modern</span> publishing platform</h1>
@@ -100,8 +163,11 @@
   </section>
 
   <footer>
-    <figure><img src="images/logo.svg" alt="Blogr logo"></figure>
+
     <ul class="footer__menu">
+      <li>
+        <figure><img src="images/logo.svg" alt="Blogr logo"></figure>
+      </li>
       <li class="footer__menu_item">
         <header>Product</header>
         <ul>
@@ -132,37 +198,7 @@
     </ul>
   </footer>
   
-
-  
-  
-  
-  <!-- 
-    desktop menus nav
-  Login
-  Sign Up
-
-
-  
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-  
-  Contact
-  Newsletter
-  LinkedIn -->
+  <script src="script.js"></script>
 
 
 </body>
